@@ -8,7 +8,7 @@ A clone of the Telsa Roadster website using a QuickCodingTuts video as a referen
 - Add responsive videos to the website
 - Build advanced CSS flexbox layouts
 
-                                                      Version 1.1 update
+  Version 1.1 update
 
 I've fixed the Javascript from my first commit that was broken.
 Also fixed the AOS animations to work properly. 
