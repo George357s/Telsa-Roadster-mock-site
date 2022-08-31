@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector('.menu-btn');
-const menuBtnMobile = document.querySelector('menu-btn-mobile');
+const menuBtnMobile = document.querySelector('.menu-btn-mobile');
 const sidebar = document.querySelector('.sidebar');
 const closeBtn = document.querySelector('.close-btn');
 const backdrop = document.querySelector('.sidebar-backdrop');
@@ -27,7 +27,7 @@ function sidebarOpen() {
 }
 
 /* Close button click event */
-close.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
    /* Changes sidebar position */
    sidebar.style.right = "-20em";
    /* Hides backdrop with a smooth transition */
@@ -37,4 +37,21 @@ close.addEventListener('click', () => {
    }, 300);
    /* Make the body scrollable again */
    document.body.classList.remove('sidebar-open-body')
+});
+
+/* Custom scroll event that changes the roof image */
+const text = document.querySelector('.roof-text');
+const roofImg = document.querySelector('.banner-img');
+
+/* Adds scroll event to the document */
+window.addEventListener('scroll', () => {
+   /* When the text element is animated */
+   if (text.classList.contains('aos-animate')) {
+      /* Show the second roof image */
+      roofImg.classList.add('roof-2');
+      /* When the animation is removed */
+   } else {
+      /* Reverts back to first image */
+      roofImg.classList.remove('roof-2');
+   }
 });
